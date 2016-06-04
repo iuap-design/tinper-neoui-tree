@@ -1,37 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Title</title>
-<link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="../vendor/uui/css/u.css">
-<link rel="stylesheet" type="text/css" href="../vendor/uui/css/u-extend.css">
-<link rel="stylesheet" type="text/css" href="../vendor/uui/css/tree.css">
-<link rel="stylesheet" type="text/css" href="../vendor/uui/css/grid.css">
-<style id="demo-style" media="screen">
-
-</style>
-</head>
-<body>
-<div class="demo">
-    <div id="demoLeft"><div id="treeTest" class="ztree" u-meta='{"id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div></div>
-    <hr />
-    <h4>dataTable操作</h4>
-    <button type="button" class="u-button raised" id="addOneRow1">新增节点</button>
-    <button type="button" class="u-button raised" id="deleteOneRow">删除节点</button> 
-    <button type="button" class="u-button raised" id="deleteAllRows">删除全部节点</button>
-</div>
-
-
-<script src="../vendor/jquery/jquery-1.11.2.js"></script>
-<script src="../vendor/knockout/knockout-3.2.0.debug.js"></script>
-<script src="../vendor/uui/js/u-polyfill.js"></script>
-<script src="../vendor/uui/js/u.js"></script>
-<script src="../vendor/uui/js/u-tree.js"></script>
-<script src="../vendor/uui/js/u-grid.js"></script>
-<script src="../vendor/requirejs/require.debug.js"></script>
-<script>
 var viewModel = {
     treeSetting:{
         view:{
@@ -140,7 +106,3 @@ u.on(deleteOneRow, "click",function(){
 u.on(deleteAllRows, "click",function(){
     viewModel.dataTable.removeAllRows();
 })
-
-</script>
-</body>
-</html>
