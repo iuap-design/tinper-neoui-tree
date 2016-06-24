@@ -28,8 +28,7 @@ var globs = {
             'js/treeComp.js'
         ],
         dtJs:[
-            'dist/js/tree.js',
-            'js/dtJs/tree.js'
+            'dist/js/tree.js'
         ]
     },
     css: 'css/tree.css'
