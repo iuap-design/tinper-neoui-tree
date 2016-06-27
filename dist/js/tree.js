@@ -714,6 +714,12 @@
 			return true;
 		},
 		onClickNode: function (event, node) {
+			//点击时取消所有超链接效果
+			$('#'+event.data.treeId+' a').removeClass('focusNode');
+			//添加focusNode样式
+			
+			$('#'+node.tId+'_a').addClass('focusNode');
+
 			var setting = data.getSetting(event.data.treeId),
 			clickFlag = ( (setting.view.autoCancelSelected && (event.ctrlKey || event.metaKey)) && data.isSelectedNode(setting, node)) ? 0 : (setting.view.autoCancelSelected && (event.ctrlKey || event.metaKey) && setting.view.selectedMulti) ? 2 : 1;
 			if (tools.apply(setting.callback.beforeClick, [setting.treeId, node, clickFlag], true) == false) return true;
@@ -870,7 +876,7 @@
 					childHtml = view.appendNodes(setting, level + 1, node[childKey], node, initFlag, openFlag && node.open);
 				}
 				if (openFlag) {
-
+					// setting.treeObj.offsetWidth=setting.treeObj[0].offsetWidth;
 					view.makeDOMNodeMainBefore(html, setting, node);
 					view.makeDOMNodeLine(html, setting, node);
 					data.getBeforeA(setting, node, html);
@@ -1181,10 +1187,29 @@
 			var title = data.getNodeTitle(setting, node),
 			url = view.makeNodeUrl(setting, node),
 			fontcss = view.makeNodeFontCss(setting, node),
+			// parDomWidth=setting.treeObj.offsetWidth,
+			// parPaddingLeft=parseInt(setting.treeObj.css('paddingLeft')),
+			parPaddingLeft=9,
+			checkboxLength=17,
+			pLeft,
 			fontStyle = [];
+			
+			if(setting.check.enable){
+				pLeft=checkboxLength+parPaddingLeft+18*(node.level+1)+'px';
+			}else{
+				pLeft=parPaddingLeft+18*(node.level+1)+'px';
+			}
+			fontStyle.push('padding-left', ":",pLeft, ";");
+			fontStyle.push('margin-left', ":", '-'+pLeft, ";");
+			// 将a标签的宽度根据上级100%再加上层级之间的padding值算出
+			parDomWidth='calc(100% + '+18*(node.level+1) +'px )';
+
+			fontStyle.push('width', ":", parDomWidth, ";");
 			for (var f in fontcss) {
 				fontStyle.push(f, ":", fontcss[f], ";");
 			}
+			// 添加width，padding
+
 			html.push("<a id='", node.tId, consts.id.A, "' class='", consts.className.LEVEL, node.level,"' treeNode", consts.id.A," onclick=\"", (node.click || ''),
 				"\" ", ((url != null && url.length > 0) ? "href='" + url + "'" : ""), " target='",view.makeNodeTarget(node),"' style='", fontStyle.join(''),
 				"'");
