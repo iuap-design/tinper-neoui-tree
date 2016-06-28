@@ -10,58 +10,56 @@ var util = require('gulp-util');
 /**
  * 公共错误处理函数
  * 使用示例：
- *  .pipe(uglify())
- .on('error', errHandle)
- .pipe(rename('u.min.js'))
+ *  .pipe(uglify().on('error', errHandle))
+    .pipe(rename('u.min.js'))
  * @param  {[type]} err [description]
  * @return {[type]}     [description]
  */
-function errHandle(err) {
-    util.log(err.fileName + '文件编译出错，出错行数为' + err.lineNumber + '，具体错误信息为：' + err.message);
+var errHandle = function ( err ) {
+    // 报错文件名
+    var fileName = err.fileName;
+    // 报错类型
+    var name = err.name;
+    // 报错信息
+    var message = err.message;
+    // 出错代码位置
+    var loc = err.loc;
+
+    var logInfo = '报错文件：' + fileName + '报错类型：' + name + '出错代码位置：' + loc.line + ',' + loc.column;
+
+    util.log( logInfo );
+
     this.end();
-};
+}
 
 
 var globs = {
-    js: {
-        js:[
-            'js/treeComp.js'
-        ],
-        dtJs:[
-            'dist/js/tree.js'
-        ]
-    },
+    js:[
+        'js/treeComp.js'
+    ],
     css: 'css/tree.css'
 };
 
-gulp.task('Js', function() {
-    return gulp.src(globs.js.js)
-        .pipe(concat('tree.js'))
-        .pipe(gulp.dest('dist/js'))
-        .pipe(uglify())
-        .on('error', errHandle)
-        .pipe(rename('tree.min.js'))
-        .pipe(gulp.dest('dist/js'));
-});
-
-gulp.task('uJs', ['Js'], function(){
-    return gulp.src(globs.js.dtJs)
+gulp.task('js', function() {
+    return gulp.src(globs.js)
         .pipe(concat('u-tree.js'))
         .pipe(gulp.dest('dist/js'))
         .pipe(uglify())
         .on('error', errHandle)
         .pipe(rename('u-tree.min.js'))
         .pipe(gulp.dest('dist/js'));
-})
+});
+
 
 gulp.task('css',function(){
     return gulp.src(globs.css)
+        .pipe(rename('u-tree.css'))
         .pipe(gulp.dest('dist/css'))
         .pipe(minifycss())
-        .pipe(rename('tree.min.css'))
+        .pipe(rename('u-tree.min.css'))
         .pipe(gulp.dest('dist/css'));
 })
 
 
-gulp.task('dist', ['uJs', 'css'], function(){
+gulp.task('dist', ['js', 'css'], function(){
 });
