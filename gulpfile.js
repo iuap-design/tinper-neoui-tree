@@ -53,10 +53,9 @@ gulp.task('js', function() {
 
 gulp.task('css',function(){
     return gulp.src(globs.css)
-        .pipe(rename('u-tree.css'))
         .pipe(gulp.dest('dist/css'))
         .pipe(minifycss())
-        .pipe(rename('u-tree.min.css'))
+        .pipe(rename('tree.min.css'))
         .pipe(gulp.dest('dist/css'));
 })
 
