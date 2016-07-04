@@ -6,6 +6,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifycss = require('gulp-minify-css');
 var util = require('gulp-util');
+var makeumd = require('./makeumd.js');
 
 /**
  * 公共错误处理函数
@@ -40,7 +41,7 @@ var globs = {
     css: 'css/tree.css'
 };
 
-gulp.task('js', function() {
+gulp.task('js-init', function() {
     return gulp.src(globs.js)
         .pipe(concat('u-tree.js'))
         .pipe(gulp.dest('dist/js'))
@@ -50,14 +51,37 @@ gulp.task('js', function() {
         .pipe(gulp.dest('dist/js'));
 });
 
+gulp.task('js', ['js-init'], function(){
+     makeumd.init([
+            'dist/js/u-tree.js',
+            'dist/js/u-tree.min.js',
+        ]);
+});
 
-gulp.task('css',function(){
+gulp.task('css-init',function(){
     return gulp.src(globs.css)
         .pipe(gulp.dest('dist/css'))
         .pipe(minifycss())
         .pipe(rename('tree.min.css'))
         .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('css', ['css-init'], function(){
+     makeumd.init([
+            'dist/css/tree.css',
+            'dist/css/tree.min.css',
+        ]);
+});
+
+gulp.task('distWatch',function(){
+    gulp.watch(globs.js,['js']);
+    gulp.watch(globs.css,['css'])
 })
+
+gulp.task('dev', ['js', 'css'], function(){
+    gulp.run('distWatch');
+});
+
 
 
 gulp.task('dist', ['js', 'css'], function(){

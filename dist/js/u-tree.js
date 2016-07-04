@@ -1,3 +1,10 @@
+/** 
+ * tree v3.0.6
+ * tree
+ * author : yonyou FED
+ * homepage : https://github.com/iuap-design/tree#readme
+ * bugs : https://github.com/iuap-design/tree/issues
+ **/ 
 
 /*
  * JQuery zTree core v3.5.18
