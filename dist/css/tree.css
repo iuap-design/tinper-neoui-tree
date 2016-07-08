@@ -452,7 +452,7 @@ ul.ztree.zTreeDragUL {
     border-left: solid 4px #666;
     border-top: solid 4px transparent;
     border-bottom: solid 4px transparent;*/
-    content: "\f107";
+    content: "\f105";
     font-family: 'FontAwesome';
     /*color: #3881D8;*/
        position: absolute;
@@ -473,7 +473,7 @@ ul.ztree.zTreeDragUL {
     border-left: solid 4px #666;
     border-top: solid 4px transparent;
     border-bottom: solid 4px transparent;*/
-    content: "\f105";
+    content: "\f107";
     font-family: 'FontAwesome';
     /*color: #3881D8;*/
        position: absolute;
