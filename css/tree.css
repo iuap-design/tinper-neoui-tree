@@ -27,6 +27,7 @@ website:    http://code.google.com/p/jquerytree/
   white-space: nowrap;
   outline: 0;
   vertical-align: middle;
+  padding: 6px 10px;
 }
 .ztree li ul {
   margin: 0;
@@ -45,6 +46,7 @@ website:    http://code.google.com/p/jquerytree/
   vertical-align: top;
   display: inline-block;
   position: relative;
+  padding: 6px 10px;
 }
 .ztree li a:hover {
     color:#3949AB !important;
@@ -95,7 +97,7 @@ website:    http://code.google.com/p/jquerytree/
 .ztree li span.button {
   line-height: 0;
   margin: 0;
-  width: 32px;
+  width: 24px;
   height: 26px;
   display: inline-block;
   position: relative;
@@ -177,7 +179,7 @@ website:    http://code.google.com/p/jquerytree/
 }
 .ztree li span.button.switch {
   
-  width: 18px;
+  width: 21px;
   height: 15px;
 }
 .ztree li span.button.root_open {
@@ -242,6 +244,8 @@ website:    http://code.google.com/p/jquerytree/
 
 .ztree li span.button.noline_open {
   background-position: -92px -72px;
+  margin-left: -8px;
+  padding-right: 8px;
 }
 .ztree li span.button.noline_close {
   /*background-position: -74px -72px;*/
@@ -266,7 +270,6 @@ website:    http://code.google.com/p/jquerytree/
   line-height:18px;
    font-size: 14px;
    line-height: 22px;
-  margin-right: 5px;
   background-position: -110px 0;
   vertical-align: top;
   *vertical-align: middle;
@@ -284,7 +287,6 @@ website:    http://code.google.com/p/jquerytree/
   line-height:18px;
    font-size: 14px;
    line-height: 22px;
-  margin-right: 5px;
   background-position: -110px 0;
   vertical-align: top;
   *vertical-align: middle;
@@ -301,7 +303,6 @@ website:    http://code.google.com/p/jquerytree/
 .ztree li span.button.ico_docu {
  background-image:none;
    font-size: 14px;
-  margin-right: 5px;
  
   vertical-align: top;
   *vertical-align: middle;
@@ -428,6 +429,7 @@ ul.ztree.zTreeDragUL {
 .ztree li span.button.switch {
     position: relative;
     z-index: 1000;
+    line-height: 15px;
 }
 
   .ztree li span.button.switch.noline_close:after {
@@ -449,7 +451,7 @@ ul.ztree.zTreeDragUL {
     /*color: #3881D8;*/
        position: absolute;
     top: 10px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .ztree li span.button.switch.noline_open:after {
@@ -470,7 +472,7 @@ ul.ztree.zTreeDragUL {
     /*color: #3881D8;*/
        position: absolute;
     top: 10px;
-    font-size: 16px;
+    font-size: 14px;
     left:5px;
 }
 .basic li span.button.switch.noline_open:after  {
