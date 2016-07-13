@@ -190,8 +190,8 @@ website:    http://code.google.com/p/jquerytree/
   background-position: -74px -54px;
 }
 .ztree li span.button.root_close:after{
-    font-family:'FontAwesome';
-    content:'\f068';
+    font-family:'uf';
+    content:'\e6ce';
     
 }
 .ztree li span.button.roots_open {
@@ -200,8 +200,8 @@ website:    http://code.google.com/p/jquerytree/
   background-position: -92px 0;
 }
 .ztree li span.button.roots_open:after{
-    font-family:'FontAwesome';
-    content:'\f068';
+    font-family:'uf';
+    content:'\e6ce';
     color:#ccc;
     
 }
@@ -211,8 +211,8 @@ website:    http://code.google.com/p/jquerytree/
     background-position: -74px -54px;
 }
 .ztree li span.button.roots_close:after{
-    font-family:'FontAwesome';
-    content:'\f067';
+    font-family:'uf';
+    content:'\e6ed';
     
 }
 .ztree li span.button.center_open,.ztree li span.button.bottom_open {
@@ -221,8 +221,8 @@ website:    http://code.google.com/p/jquerytree/
     background-position: -74px -54px;
 }
 .ztree li span.button.center_open:after,.ztree li span.button.bottom_open:after{
-    font-family:'FontAwesome';
-    content:'\f068';
+    font-family:'uf';
+    content:'\e6ce';
     color:#ccc;
     
 }
@@ -232,13 +232,13 @@ website:    http://code.google.com/p/jquerytree/
     background-position: -74px -54px;
 }
 .ztree li span.button.center_close:after {
-    font-family:'FontAwesome';
-    content:'\f067';
+    font-family:'uf';
+    content:'\e6ed';
     
 }
 .ztree li span.button.bottom_close:after{
-    font-family:'FontAwesome';
-    content:'\f067';
+    font-family:'uf';
+    content:'\e6ed';
 }
 
 .ztree li span.button.noline_open {
@@ -274,8 +274,8 @@ website:    http://code.google.com/p/jquerytree/
   overflow: hidden;
 }
 .ztree li span.button.ico_open:after {
-    font-family:'FontAwesome';
-    content:'\f07c';
+    font-family:'uf';
+    content:'\e6d8';
     /*color:#3881D8;*/
     position: absolute;
     top: 3px;
@@ -293,8 +293,8 @@ website:    http://code.google.com/p/jquerytree/
   /*color:#3881D8;*/
 }
 .ztree li span.button.ico_close:after {
-    font-family:'FontAwesome';
-    content:'\f07b';
+    font-family:'uf';
+    content:'\e688';
     
     position: absolute;
     top: 3px;
@@ -309,8 +309,8 @@ website:    http://code.google.com/p/jquerytree/
   overflow: hidden;
 }
 .ztree li span.button.ico_docu:after {
-    font-family:'FontAwesome';
-    content:'\f016';
+    font-family:'uf';
+    content:'\e628';
     /*color:#3881D8;*/
     position: absolute;
     top: 11px;
@@ -445,12 +445,12 @@ ul.ztree.zTreeDragUL {
     border-left: solid 4px #666;
     border-top: solid 4px transparent;
     border-bottom: solid 4px transparent;*/
-    content: "\f105";
-    font-family: 'FontAwesome';
+    content: "\e611";
+    font-family: 'uf';
     /*color: #3881D8;*/
        position: absolute;
     top: 10px;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .ztree li span.button.switch.noline_open:after {
@@ -466,8 +466,8 @@ ul.ztree.zTreeDragUL {
     border-left: solid 4px #666;
     border-top: solid 4px transparent;
     border-bottom: solid 4px transparent;*/
-    content: "\f107";
-    font-family: 'FontAwesome';
+    content: "\e608";
+    font-family: 'uf';
     /*color: #3881D8;*/
        position: absolute;
     top: 10px;
@@ -475,21 +475,21 @@ ul.ztree.zTreeDragUL {
     left:5px;
 }
 .basic li span.button.switch.noline_open:after  {
-    content: "\f068";
+    content: "\e6ce";
     left: 0;
     font-size: 12px;
 }
 .basic li span.button.switch.noline_close:after  {
-    content: "\f067";
+    content: "\e6ed";
     left: 0;
     font-size: 12px;
 }
 .basic li span.button.ico_close:after{
-  content: "\f07b";
+  content: "\e688";
   top:1px;
 }
 .basic li span.button.ico_open:after{
-  content: "\f07b";
+  content: "\e688";
   top:1px;
 }
 .basic li span.button.ico_close{
