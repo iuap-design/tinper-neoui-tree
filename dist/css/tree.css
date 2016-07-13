@@ -48,15 +48,14 @@ website:    http://code.google.com/p/jquerytree/
   cursor: pointer;
   color: #333;
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: none !important;
   vertical-align: top;
   display: inline-block;
   position: relative;
 }
 .ztree li a:hover {
-    /*background-color: #eee;*/
-    color:#3949AB;
-    background-color: #eee;
+    color:#3949AB !important;
+    background-color: #eee !important;
 }
 /*.ztree li:hover >span{
     color:#3949AB;
@@ -103,7 +102,7 @@ website:    http://code.google.com/p/jquerytree/
 .ztree li span.button {
   line-height: 0;
   margin: 0;
-  width: 16px;
+  width: 32px;
   height: 26px;
   display: inline-block;
   position: relative;
