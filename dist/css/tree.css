@@ -54,6 +54,7 @@ website:    http://code.google.com/p/jquerytree/
   display: inline-block;
   position: relative;
   padding: 6px 10px;
+  box-sizing: border-box;
 }
 .ztree li a:hover {
     color:#3949AB !important;
