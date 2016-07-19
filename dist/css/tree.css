@@ -34,7 +34,7 @@ website:    http://code.google.com/p/jquerytree/
   white-space: nowrap;
   outline: 0;
   vertical-align: middle;
-  padding: 6px 10px;
+  // padding: 6px 10px;
 }
 .ztree li ul {
   margin: 0;
@@ -186,8 +186,10 @@ website:    http://code.google.com/p/jquerytree/
 }
 .ztree li span.button.switch {
   
+  // width: 21px;
+  // height: 15px;
   width: 21px;
-  height: 15px;
+  height: 21px;
 }
 .ztree li span.button.root_open {
   background-position: -92px -54px;
@@ -436,7 +438,7 @@ ul.ztree.zTreeDragUL {
 .ztree li span.button.switch {
     position: relative;
     z-index: 1000;
-    line-height: 15px;
+    line-height: 21px;
 }
 
   .ztree li span.button.switch.noline_close:after {
@@ -515,8 +517,8 @@ ul.ztree.zTreeDragUL {
   /*color: #757575;*/
 }
 .basic li a.focusNode{
-  color: #ffffff;
-  background-color: #3949ab;
+  color: #ffffff !important;
+  background-color: #3949ab !important;
 }
 .basic .focusNode{
   color: #ffffff;

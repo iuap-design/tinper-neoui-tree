@@ -1190,7 +1190,7 @@
 			// parDomWidth=setting.treeObj.offsetWidth,
 			// parPaddingLeft=parseInt(setting.treeObj.css('paddingLeft')),
 			parPaddingLeft=9,
-			checkboxLength=17,
+			checkboxLength=21,
 			pLeft,
 			fontStyle = [];
 			
