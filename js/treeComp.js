@@ -1204,7 +1204,7 @@
 			// 将a标签的宽度根据上级100%再加上层级之间的padding值算出
 			parDomWidth='calc(100% + '+18*(node.level+1) +'px )';
 
-			fontStyle.push('width', ":", parDomWidth, ";");
+			fontStyle.push('min-width', ":", parDomWidth, ";");
 			for (var f in fontcss) {
 				fontStyle.push(f, ":", fontcss[f], ";");
 			}

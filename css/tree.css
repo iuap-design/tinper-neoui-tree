@@ -17,6 +17,7 @@ website:    http://code.google.com/p/jquerytree/
   margin: 0;
   padding: 9px;
   color: #333333;
+  overflow: auto;
 }
 .ztree li {
   padding: 0;
