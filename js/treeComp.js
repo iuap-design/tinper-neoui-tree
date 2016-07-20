@@ -1190,14 +1190,15 @@
 			// parDomWidth=setting.treeObj.offsetWidth,
 			// parPaddingLeft=parseInt(setting.treeObj.css('paddingLeft')),
 			parPaddingLeft=9,
-			checkboxLength=21,
+			checkboxLength=18,
+			iconLength=21,
 			pLeft,
 			fontStyle = [];
 			
 			if(setting.check.enable){
-				pLeft=checkboxLength+parPaddingLeft+18*(node.level+1)+'px';
+				pLeft=checkboxLength+parPaddingLeft+iconLength*(node.level+1)+'px';
 			}else{
-				pLeft=parPaddingLeft+18*(node.level+1)+'px';
+				pLeft=parPaddingLeft+iconLength*(node.level+1)+'px';
 			}
 			fontStyle.push('padding-left', ":",pLeft, ";");
 			fontStyle.push('margin-left', ":", '-'+pLeft, ";");
