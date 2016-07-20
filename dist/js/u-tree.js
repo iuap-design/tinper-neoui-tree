@@ -1197,21 +1197,22 @@
 			// parDomWidth=setting.treeObj.offsetWidth,
 			// parPaddingLeft=parseInt(setting.treeObj.css('paddingLeft')),
 			parPaddingLeft=9,
-			checkboxLength=21,
+			checkboxLength=18,
+			iconLength=21,
 			pLeft,
 			fontStyle = [];
 			
 			if(setting.check.enable){
-				pLeft=checkboxLength+parPaddingLeft+18*(node.level+1)+'px';
+				pLeft=checkboxLength+parPaddingLeft+iconLength*(node.level+1)+'px';
 			}else{
-				pLeft=parPaddingLeft+18*(node.level+1)+'px';
+				pLeft=parPaddingLeft+iconLength*(node.level+1)+'px';
 			}
 			fontStyle.push('padding-left', ":",pLeft, ";");
 			fontStyle.push('margin-left', ":", '-'+pLeft, ";");
 			// 将a标签的宽度根据上级100%再加上层级之间的padding值算出
 			parDomWidth='calc(100% + '+18*(node.level+1) +'px )';
 
-			fontStyle.push('width', ":", parDomWidth, ";");
+			fontStyle.push('min-width', ":", parDomWidth, ";");
 			for (var f in fontcss) {
 				fontStyle.push(f, ":", fontcss[f], ";");
 			}

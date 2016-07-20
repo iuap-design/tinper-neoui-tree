@@ -24,6 +24,7 @@ website:    http://code.google.com/p/jquerytree/
   margin: 0;
   padding: 9px;
   color: #333333;
+  overflow: auto;
 }
 .ztree li {
   padding: 0;
@@ -66,7 +67,9 @@ website:    http://code.google.com/p/jquerytree/
 }*/
 .ztree li a.focusNode {
     /*background-color: #eee;*/
-    background-color: #C0EBF4;
+    // background-color: #C0EBF4;
+    background-color: rgb(63,81,181);
+    color: #FFFFFF;
 }
 
 .ztree li a.curSelectedNode span:first-child + span{
