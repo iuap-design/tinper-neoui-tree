@@ -6,7 +6,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifycss = require('gulp-minify-css');
 var util = require('gulp-util');
-var makeumd = require('./makeumd.js');
+var version = require('./version.js');
 
 /**
  * 公共错误处理函数
@@ -52,7 +52,7 @@ gulp.task('js-init', function() {
 });
 
 gulp.task('js', ['js-init'], function(){
-     makeumd.init([
+     version.init([
             'dist/js/u-tree.js',
             'dist/js/u-tree.min.js',
         ]);
@@ -67,7 +67,7 @@ gulp.task('css-init',function(){
 });
 
 gulp.task('css', ['css-init'], function(){
-     makeumd.init([
+     version.init([
             'dist/css/tree.css',
             'dist/css/tree.min.css',
         ]);
