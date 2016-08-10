@@ -3541,6 +3541,9 @@
 
 	var _selectNode = view.selectNode;
 	view.selectNode = function(setting, node, addFlag) {
+		$('#'+setting.treeId+' a').removeClass('focusNode');
+		$('#'+node.tId+'_a').addClass('focusNode');
+
 		var root = data.getRoot(setting);
 		if (data.isSelectedNode(setting, node) && root.curEditNode == node && node.editNameFlag) {
 			return false;
