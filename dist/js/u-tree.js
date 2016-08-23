@@ -1,5 +1,5 @@
 /** 
- * tree v3.0.6
+ * neoui-tree v1.0.0
  * tree
  * author : yonyou FED
  * homepage : https://github.com/iuap-design/tree#readme
