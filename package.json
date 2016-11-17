@@ -1,6 +1,6 @@
 {
   "name": "tinper-neoui-tree",
-  "version": "3.1.10",
+  "version": "3.1.9",
   "description": "tree",
   "main": "gulpfile.js",
   "directories": {
