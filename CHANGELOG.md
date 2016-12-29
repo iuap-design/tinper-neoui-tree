@@ -1,3 +1,13 @@
+<a name="3.1.19"></a>
+## [3.1.19](https://github.com/iuap-design/tinper-neoui-tree/compare/v3.1.18...v3.1.19) (2016-12-29)
+
+
+### Bug Fixes
+* 优化IE下树的展示 ([db173f0](https://github.com/iuap-design/tinper-neoui-tree/commit/db173f0))
+
+
+
+
 <a name="3.1.18"></a>
 ## [3.1.18](https://github.com/iuap-design/tinper-neoui-tree/compare/v3.1.17...v3.1.18) (2016-12-15)
 
