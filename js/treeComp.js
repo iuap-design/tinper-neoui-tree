@@ -1191,16 +1191,21 @@
 			// parPaddingLeft=parseInt(setting.treeObj.css('paddingLeft')),
 			parPaddingLeft=9,
 			checkboxLength=18,
-			iconLength=21,
+			// 第一个图片的宽度
+			iconLength=18,
 			pLeft,
 			fontStyle = [];
 			
 			if(setting.check.enable){
-				pLeft=checkboxLength+parPaddingLeft+iconLength*(node.level+1) + 30 +'px';
-				mLeft = checkboxLength+parPaddingLeft+iconLength*(node.level+1) +'px';
+				
+				// pLeft=checkboxLength+parPaddingLeft+iconLength*(node.level+1) + 30 +'px';
+				// 因为a标签前面的图标设置成了absolute，所以忽略前面的宽度即减去21px
+				pLeft=checkboxLength+parPaddingLeft+iconLength*(node.level) + 30 +'px';
+
+				mLeft = checkboxLength+parPaddingLeft+iconLength*(node.level) +'px';
 			}else{
-				pLeft=parPaddingLeft+iconLength*(node.level+1)+30+'px';
-				mLeft=parPaddingLeft+iconLength*(node.level+1)+'px';
+				pLeft=parPaddingLeft+iconLength*(node.level)+30+'px';
+				mLeft=parPaddingLeft+iconLength*(node.level)+'px';
 			}
 			fontStyle.push('padding-left', ":",pLeft, ";");
 			fontStyle.push('margin-left', ":", '-'+mLeft, ";");
