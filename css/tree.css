@@ -439,7 +439,7 @@ ul.ztree.zTreeDragUL {
 }
 
 .ztree li span.button.switch {
-    position: relative;
+    position: absolute;
     z-index: 1000;
     line-height: 21px;
 }
