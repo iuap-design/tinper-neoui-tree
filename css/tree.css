@@ -100,6 +100,14 @@ website:    http://code.google.com/p/jquerytree/
   line-height: 16px;
   margin-right: 2px;
 }
+
+.ztree li > a > span:last-child {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 80%;
+}
+
 .ztree li span.button {
   line-height: 0;
   margin: 0;

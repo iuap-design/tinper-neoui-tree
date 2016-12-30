@@ -194,8 +194,10 @@ website:    http://code.google.com/p/jquerytree/
 
   // width: 21px;
   // height: 15px;
-  width: 21px;
-  height: 21px;
+  // width: 21px;
+  // height: 21px;
+  width: 18px;
+  height: 18px;
 }
 .ztree li span.button.root_open {
   background-position: -92px -54px;
@@ -441,7 +443,7 @@ ul.ztree.zTreeDragUL {
     border-color: #bcbcbc;
 }
 
-.ztree li.focusNode span.button.switch {
+.ztree li.focusNode>span.button.switch {
    color: #FFFFFF;
 }
 
