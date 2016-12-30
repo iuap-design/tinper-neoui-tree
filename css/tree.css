@@ -436,7 +436,7 @@ ul.ztree.zTreeDragUL {
     border-color: #bcbcbc;
 }
 
-.ztree li.focusNode span.button.switch {
+.ztree li.focusNode>span.button.switch {
    color: #FFFFFF;
 }
 
