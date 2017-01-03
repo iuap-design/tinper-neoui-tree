@@ -1207,19 +1207,19 @@
 				
 				// pLeft=checkboxLength+parPaddingLeft+iconLength*(node.level+1) + 30 +'px';
 				// 因为a标签前面的图标设置成了absolute，所以忽略前面的宽度即减去21px
-				pLeft=checkboxLength+parPaddingLeft+iconLength*(node.level) + 30 +'px';
+				pLeft=checkboxLength+parPaddingLeft+iconLength*(node.level +1) +'px';
 
-				mLeft = checkboxLength+parPaddingLeft+iconLength*(node.level) +'px';
+				mLeft = checkboxLength+parPaddingLeft+iconLength*(node.level+1) +'px';
 			}else{
-				pLeft=parPaddingLeft+iconLength*(node.level)+30+'px';
-				mLeft=parPaddingLeft+iconLength*(node.level)+'px';
+				pLeft=parPaddingLeft+iconLength*(node.level +1)+'px';
+				mLeft=parPaddingLeft+iconLength*(node.level +1)+'px';
 			}
 			fontStyle.push('padding-left', ":",pLeft, ";");
 			fontStyle.push('margin-left', ":", '-'+mLeft, ";");
 			// 将a标签的宽度根据上级100%再加上层级之间的padding值算出
 			parDomWidth='calc(100% + '+18*(node.level+1) +'px )'; 
 
-			fontStyle.push('width', ":", parDomWidth, ";");
+			fontStyle.push('min-width', ":", parDomWidth, ";");
 			for (var f in fontcss) {
 				fontStyle.push(f, ":", fontcss[f], ";");
 			}

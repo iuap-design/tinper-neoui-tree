@@ -107,6 +107,9 @@ website:    http://code.google.com/p/jquerytree/
   line-height: 16px;
   margin-right: 2px;
 }
+
+
+
 .ztree li span.button {
   line-height: 0;
   margin: 0;
@@ -448,9 +451,11 @@ ul.ztree.zTreeDragUL {
 }
 
 .ztree li span.button.switch {
-    position: absolute;
+    // position: absolute;
+    position:relative;
     z-index: 1000;
     line-height: 21px;
+    float:left;
 }
 
 .ztree li span.button.switch.noline_close:after {
