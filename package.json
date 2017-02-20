@@ -1,6 +1,6 @@
 {
   "name": "tinper-neoui-tree",
-  "version": "3.1.25",
+  "version": "3.1.26",
   "description": "tree",
   "main": "gulpfile.js",
   "directories": {
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "product": "gulp dist",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && node changeSort.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 ",
     "utipbuild": "gulp dist"
   },
   "repository": {

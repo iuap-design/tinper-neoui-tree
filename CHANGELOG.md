@@ -1,3 +1,8 @@
+<a name="3.1.26"></a>
+## [3.1.26](https://github.com/iuap-design/tinper-neoui-tree/compare/v3.1.25...v3.1.26) (2017-02-20)
+
+
+
 <a name="3.1.25"></a>
 ## [3.1.25](https://github.com/iuap-design/tinper-neoui-tree/compare/v3.1.23...v3.1.25) (2017-02-10)
 
@@ -18,12 +23,10 @@
 
 
 ### Bug Fixes
+
 * tree 左侧图标不随着移动以及节点hover效果 ([80ee7b0](https://github.com/iuap-design/tinper-neoui-tree/commit/80ee7b0))
-
 * 树hover的颜色选中的范围 ([0fd221f](https://github.com/iuap-design/tinper-neoui-tree/commit/0fd221f))
-
 * 节点长度过长时显示省略号 ([6be2f47](https://github.com/iuap-design/tinper-neoui-tree/commit/6be2f47))
-
 
 
 
@@ -32,8 +35,8 @@
 
 
 ### Bug Fixes
-* 优化IE下树的展示 ([db173f0](https://github.com/iuap-design/tinper-neoui-tree/commit/db173f0))
 
+* 优化IE下树的展示 ([db173f0](https://github.com/iuap-design/tinper-neoui-tree/commit/db173f0))
 
 
 

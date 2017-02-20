@@ -36,9 +36,9 @@ var errHandle = function ( err ) {
 
 var globs = {
     js:[
-        'js/treeComp.js'
+        'src/js/treeComp.js'
     ],
-    css: 'css/tree.css'
+    css: 'src/css/tree.css'
 };
 
 gulp.task('js-init', function() {
