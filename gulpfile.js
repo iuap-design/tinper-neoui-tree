@@ -43,33 +43,34 @@ var globs = {
 
 gulp.task('js-init', function() {
     return gulp.src(globs.js)
-        .pipe(concat('u-tree.js'))
-        .pipe(gulp.dest('dist/js'))
+        .pipe(concat('tinper-neoui-tree.js'))
+        .pipe(gulp.dest('dist'))
         .pipe(uglify())
         .on('error', errHandle)
-        .pipe(rename('u-tree.min.js'))
-        .pipe(gulp.dest('dist/js'));
+        .pipe(rename('tinper-neoui-tree.min.js'))
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('js', ['js-init'], function(){
      makeumd.init([
-            'dist/js/u-tree.js',
-            'dist/js/u-tree.min.js',
+            'dist/tinper-neoui-tree.js',
+            'dist/tinper-neoui-tree.min.js',
         ]);
 });
 
 gulp.task('css-init',function(){
     return gulp.src(globs.css)
-        .pipe(gulp.dest('dist/css'))
+        .pipe(rename('tinper-neoui-tree.css'))
+        .pipe(gulp.dest('dist'))
         .pipe(minifycss())
-        .pipe(rename('tree.min.css'))
-        .pipe(gulp.dest('dist/css'));
+        .pipe(rename('tinper-neoui-tree.min.css'))
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('css', ['css-init'], function(){
      makeumd.init([
-            'dist/css/tree.css',
-            'dist/css/tree.min.css',
+            'dist/tinper-neoui-tree.css',
+            'dist/tinper-neoui-tree.min.css',
         ]);
 });
 
