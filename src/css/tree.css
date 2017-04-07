@@ -173,6 +173,8 @@ website:    http://code.google.com/p/jquerytree/
 
 .ztree li span.button.chk.checkbox_true_part_focus {
     background-position: -14px -42px;
+    border-color: #2db7f5;
+    background-color: #2db7f5;
 }
 
 .ztree li span.button.chk.checkbox_true_disable {
