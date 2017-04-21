@@ -1,3 +1,13 @@
+<a name="3.2.1"></a>
+## [3.2.1](https://github.com/iuap-design/tinper-neoui-tree/compare/v3.2.0...v3.2.1) (2017-04-19)
+
+
+### Features
+
+* tree插入数据的时候增加指定index处理 ([d9db726](https://github.com/iuap-design/tinper-neoui-tree/commit/d9db726))
+
+
+
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/iuap-design/tinper-neoui-tree/compare/v3.1.27...v3.2.0) (2017-03-07)
 
