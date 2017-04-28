@@ -728,11 +728,7 @@
 			return true;
 		},
 		onClickNode: function (event, node) {
-			//点击时取消所有超链接效果
-			$('#'+event.data.treeId+' a').removeClass('focusNode');
-			//添加focusNode样式
 
-			$('#'+node.tId+'_a').addClass('focusNode');
 
 			var setting = data.getSetting(event.data.treeId),
 			clickFlag = ( (setting.view.autoCancelSelected && (event.ctrlKey || event.metaKey)) && data.isSelectedNode(setting, node)) ? 0 : (setting.view.autoCancelSelected && (event.ctrlKey || event.metaKey) && setting.view.selectedMulti) ? 2 : 1;
@@ -3598,6 +3594,11 @@
 
 	var _selectNode = view.selectNode;
 	view.selectNode = function(setting, node, addFlag) {
+		//点击时取消所有超链接效果
+		$('#'+setting.treeId+' a').removeClass('focusNode');
+		//添加focusNode样式
+
+		$('#'+node.tId+'_a').addClass('focusNode');
 		var root = data.getRoot(setting);
 		if (data.isSelectedNode(setting, node) && root.curEditNode == node && node.editNameFlag) {
 			return false;
