@@ -307,6 +307,9 @@
 		n.getParentNode = function() {return data.getNodeCache(setting, n.parentTId);};
 		n.getPreNode = function() {return data.getPreNode(setting, n);};
 		n.getNextNode = function() {return data.getNextNode(setting, n);};
+		n.getPath = function () {
+				return data.getNodePath(setting, n);
+		};
 		n.isAjaxing = false;
 		data.fixPIdKeyValue(setting, n);
 	},
@@ -466,6 +469,22 @@
 		getNodeName: function(setting, node) {
 			var nameKey = setting.data.key.name;
 			return "" + node[nameKey];
+		},
+		getNodePath: function (setting, node) {
+				if (!node) return null;
+
+				var path;
+				if (node.parentTId) {
+						path = node.getParentNode().getPath();
+				} else {
+						path = [];
+				}
+
+				if (path) {
+						path.push(node);
+				}
+
+				return path;
 		},
 		getNodeTitle: function(setting, node) {
 			var t = setting.data.key.title === "" ? setting.data.key.name : setting.data.key.title;
