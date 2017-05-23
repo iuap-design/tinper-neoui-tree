@@ -1,5 +1,5 @@
 /** 
- * tinper-neoui-tree v3.2.1
+ * tinper-neoui-tree v3.2.2
  * tree
  * author : yonyou FED
  * homepage : https://github.com/iuap-design/tinper-neoui-tree#readme
@@ -314,6 +314,9 @@
 		n.getParentNode = function() {return data.getNodeCache(setting, n.parentTId);};
 		n.getPreNode = function() {return data.getPreNode(setting, n);};
 		n.getNextNode = function() {return data.getNextNode(setting, n);};
+		n.getPath = function () {
+				return data.getNodePath(setting, n);
+		};
 		n.isAjaxing = false;
 		data.fixPIdKeyValue(setting, n);
 	},
@@ -473,6 +476,22 @@
 		getNodeName: function(setting, node) {
 			var nameKey = setting.data.key.name;
 			return "" + node[nameKey];
+		},
+		getNodePath: function (setting, node) {
+				if (!node) return null;
+
+				var path;
+				if (node.parentTId) {
+						path = node.getParentNode().getPath();
+				} else {
+						path = [];
+				}
+
+				if (path) {
+						path.push(node);
+				}
+
+				return path;
 		},
 		getNodeTitle: function(setting, node) {
 			var t = setting.data.key.title === "" ? setting.data.key.name : setting.data.key.title;
@@ -735,11 +754,7 @@
 			return true;
 		},
 		onClickNode: function (event, node) {
-			//点击时取消所有超链接效果
-			$('#'+event.data.treeId+' a').removeClass('focusNode');
-			//添加focusNode样式
 
-			$('#'+node.tId+'_a').addClass('focusNode');
 
 			var setting = data.getSetting(event.data.treeId),
 			clickFlag = ( (setting.view.autoCancelSelected && (event.ctrlKey || event.metaKey)) && data.isSelectedNode(setting, node)) ? 0 : (setting.view.autoCancelSelected && (event.ctrlKey || event.metaKey) && setting.view.selectedMulti) ? 2 : 1;
@@ -3605,6 +3620,11 @@
 
 	var _selectNode = view.selectNode;
 	view.selectNode = function(setting, node, addFlag) {
+		//点击时取消所有超链接效果
+		$('#'+setting.treeId+' a').removeClass('focusNode');
+		//添加focusNode样式
+
+		$('#'+node.tId+'_a').addClass('focusNode');
 		var root = data.getRoot(setting);
 		if (data.isSelectedNode(setting, node) && root.curEditNode == node && node.editNameFlag) {
 			return false;

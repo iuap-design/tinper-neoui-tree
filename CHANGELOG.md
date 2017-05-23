@@ -1,3 +1,13 @@
+<a name="3.2.2"></a>
+## [3.2.2](https://github.com/iuap-design/tinper-neoui-tree/compare/v3.2.1...v3.2.2) (2017-05-16)
+
+
+### Features
+
+* 添加getPath方法，与最新的ztree版本保持一致 ([b78ab0e](https://github.com/iuap-design/tinper-neoui-tree/commit/b78ab0e))
+
+
+
 <a name="3.2.1"></a>
 ## [3.2.1](https://github.com/iuap-design/tinper-neoui-tree/compare/v3.2.0...v3.2.1) (2017-04-19)
 
